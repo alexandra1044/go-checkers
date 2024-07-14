@@ -20,7 +20,7 @@ func GenerateBoard() *fyne.Container {
 			if x%2 == y%2 {
 				bg.FillColor = color.White
 			}
-			counter := canvas.NewImageFromResource(GetCounterSVG())
+			counter := canvas.NewImageFromResource(GetCounterSVG(Standard, Black))
 			//maintain aspect ratio of image when stretching the canvas
 			counter.FillMode = canvas.ImageFillContain
 			grid.Add(container.NewStack(bg, counter))

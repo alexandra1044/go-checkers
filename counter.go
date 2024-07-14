@@ -4,7 +4,45 @@ package main
 
 import "fyne.io/fyne/v2"
 
-func GetCounterSVG() fyne.Resource {
-	return resourceAmbercounterSvg
+type CounterType int8
+
+const (
+	Standard = iota
+	King
+)
+
+type CounterColour int8
+
+const (
+	Black = iota
+	Yellow
+)
+
+func GetCounterColour() CounterColour {
+
+	return Black
+}
+
+func GetCounterSVG(c CounterType, cc CounterColour) fyne.Resource {
+	switch c {
+	case Standard:
+		switch cc {
+		case Black:
+			return resourceBlueGreycounterSvg
+
+		case Yellow:
+			return resourceAmbercounterSvg
+		}
+	case King:
+		switch cc {
+		case Black:
+			return resourceBlueGreycounterSvg
+
+		case Yellow:
+			return resourceKingyellowSvg
+		}
+	}
+
+	return nil
 
 }
