@@ -1,20 +1,22 @@
 //go:generate fyne bundle -o assets.go assets
 
-package main
+package checkers
 
 import "fyne.io/fyne/v2"
 
 type CounterType int8
 
 const (
-	Standard = iota
+	Empty = iota
+	Standard
 	King
 )
 
 type CounterColour int8
 
 const (
-	Black = iota
+	Colourless = iota
+	Black
 	Yellow
 )
 

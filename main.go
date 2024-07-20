@@ -1,4 +1,4 @@
-package main
+package checkers
 
 import (
 	"fyne.io/fyne/v2"

@@ -1,4 +1,4 @@
-package main
+package checkers
 
 // needs to return the default beginning game state
 func NewGame() {
